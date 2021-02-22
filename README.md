@@ -43,6 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure is when you nest a function inside a function and the children elements can inherit the variables from the parent element.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,9 +67,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+Closure is used in the console.log. The "name" parameter will be taken from the parent function, outside of the function
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The same is "Dan rolled a". The number could change because we are using Math.random to find a random number, 1-6.
+
 c. What is the lexical scope of `newRoll`? 
 
+The return function(){} because newRoll is nested inside and can't be accessed from outside.
 
 ### Task 3 - Stretch Goals
 
