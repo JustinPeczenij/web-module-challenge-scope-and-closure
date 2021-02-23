@@ -29,10 +29,17 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
   
+  counter1 uses a closure and lexical scope to declare count, counter2 uses global scope to declare count
+
   2. Which of the two uses a closure? How can you tell?
+
+  counter1 uses a closure. You can tell because there is a function nested in a function, and the count variable being used is declared outside the function being ran.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+  counter1 would be preferable if variable count doesn't have to be accessed again, counter2 would be better if you need to access the variable count again.
+
 */
 
 // counter1 code
@@ -62,9 +69,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    let inningScore = Math.floor(Math.random() * 3)
+    return inningScore
 }
+
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
